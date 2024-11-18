@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: ghostwhite;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        form input,
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        table {
+            margin-bottom: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table td {
+            padding: 10px;
+            border: 0.1px solid black;
+            text-align: left;
+        }
+
+        #flexbox {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: limegreen;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    
+    <form action="contactform.php" method="POST">
+
+        <label for="firstname">*First Name</label>
+        <input type="text" id="firstname" name="firstname" tabindex="1" required>
+
+        <label for="lastname">*Last Name</label>
+        <input type="text" id="lastname" name="lastname" tabindex="2" required>
+
+        <label for="phonenumber">*Phone</label>
+        <input type="tel" id="phonenumber" name="phonenumber" tabindex="3" required>
+
+        <label for="emailaddress">*Email</label>
+        <input type="email" id="emailaddress" name="emailaddress" tabindex="4" required>
+
+        <h3>Which browser are you using?</h3>
+        <label><input type="checkbox" name="browser" value="Chrome" tabindex="5" checked> Chrome</label>
+        <label><input type="checkbox" name="browser" value="Firefox" tabindex="6"> Firefox</label>
+        <label><input type="checkbox" name="browser" value="Safari" tabindex="7"> Safari</label>
+        <label><input type="checkbox" name="browser" value="Opera" tabindex="8"> Opera</label>
+
+        <h3>Which operating system are you using?</h3>
+        <label><input type="radio" name="os" value="Windows 11" tabindex="9" checked> Windows 11</label>
+        <label><input type="radio" name="os" value="Windows 10" tabindex="10"> Windows 10</label>
+        <label><input type="radio" name="os" value="Windows 7" tabindex="11"> Windows 7</label>
+        <label><input type="radio" name="os" value="OSX" tabindex="12"> macOS (OSX)</label>
+        <label><input type="radio" name="os" value="Linux" tabindex="13"> Linux</label>
+
+        <h3>What do you think of my site?</h3>
+        <select id="websiteOpinion" name="websiteOpinion" tabindex="14">
+            <option value="select one" selected>Select one</option>
+            <option value="poor">Poor</option>
+            <option value="fair">Fair</option>
+            <option value="good">Good</option>
+            <option value="excellent">Excellent</option>
+        </select>
+
+        <h3>Definition of ratings?</h3>
+        <div id="flexbox">    
+            <table>
+                <tr><td>Rating</td></tr>
+                <tr><td>Excellent</td></tr>
+                <tr><td>Good</td></tr>
+                <tr><td>Fair</td></tr> 
+                <tr><td>Poor</td></tr>
+            </table>
+
+            <table>
+                <tr><td>Definition</td></tr>
+                <tr><td>Of the highest or finest quality; exceptionally good for its kind.</td></tr>
+                <tr><td>Being positive or desirable in nature; not bad or poor.</td></tr>
+                <tr><td>Of pleasing appearance, especially because of a pure or fresh quality; comely.</td></tr>
+                <tr><td>Not adequate in quality or quantity; inferior.</td></tr>
+            </table>
+        </div>
+
+        <h3>Comments about our website:</h3>
+        <textarea id="comments" name="comments" rows="5" tabindex="15"></textarea>
+
+        <button type="submit" tabindex="16">Submit</button>
+    </form>
+</body>
+</html>
